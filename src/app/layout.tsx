@@ -61,10 +61,10 @@ export default function RootLayout({
       className='no-scrollbar'
     >
       <body className={`${jercy10.variable} antialiased`}>
-        <Logo />
-        <Menu />
         <InProgress />
         {children}
+        <Logo />
+        <Menu />
         <DinoSay />
       </body>
     </html>
