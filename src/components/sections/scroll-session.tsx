@@ -35,7 +35,7 @@ export default function ScrollSections({
       className={cn('relative')}
       style={{ height: `${100 * total}dvh` }}
     >
-      <div className='overflow-hidde sticky top-0 h-screen w-full'>
+      <div className='sticky top-0 h-screen w-full overflow-hidden'>
         <motion.div
           style={{ x }}
           className='flex h-full w-full'
