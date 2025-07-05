@@ -25,17 +25,17 @@ export const metadata: Metadata = {
     'software engineering',
     'projects',
   ],
-  authors: [{ name: 'Thanapon', url: 'https://yoke-th.me' }],
+  authors: [{ name: 'Thanapon', url: 'https://yoketh.dev' }],
   robots: 'index, follow',
   openGraph: {
     title: 'Thanapon | Yoke-TH Portfolio',
     description:
       'Explore the portfolio of Yoke-TH, featuring projects and experiences in software development.',
-    url: 'https://yoke-th.me',
+    url: 'https://yoketh.dev',
     siteName: 'Thanapon | Yoke-TH Portfolio',
     images: [
       {
-        url: 'https://yoke-th.me/me.jpg',
+        url: 'https://yoketh.dev/me.webp',
         width: 2048,
         height: 1365,
         alt: 'Thanapon Portfolio Preview',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
   },
   alternates: {
-    canonical: 'https://yoke-th.me',
+    canonical: 'https://yoketh.dev',
   },
 }
 
