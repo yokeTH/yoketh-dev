@@ -1,5 +1,7 @@
 'use client'
 
+import { useEffect } from 'react'
+
 import { cn } from '@sglara/cn'
 import {
   motion,
@@ -15,7 +17,7 @@ export default function ScrollSections({
 }: {
   children: React.ReactNode
 }) {
-  const { total, ref, setCurrent } = useScrollContext()
+  const { total, ref, setCurrent, setTotal } = useScrollContext()
   const { scrollYProgress } = useScroll({ target: ref })
 
   const x = useTransform(
@@ -23,6 +25,10 @@ export default function ScrollSections({
     [0, 1],
     ['0%', `-${(total - 1) * 100}%`],
   )
+
+  useEffect(() => {
+    setTotal(Array.isArray(children) ? children.length : 1)
+  })
 
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     const index = Math.min(total, Math.ceil(latest * total) + 1)
@@ -35,7 +41,7 @@ export default function ScrollSections({
       className={cn('relative')}
       style={{ height: `${100 * total}dvh` }}
     >
-      <div className='sticky top-0 h-screen w-full overflow-hidden'>
+      <div className='sticky top-0 h-screen w-full snap-x snap-mandatory overflow-hidden scroll-smooth'>
         <motion.div
           style={{ x }}
           className='flex h-full w-full'
