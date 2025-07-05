@@ -17,9 +17,11 @@ const leftBrecket = {
 }
 
 const rightBrecket = {
-  rest: {},
-  hover: {
+  rest: {
     x: 10,
+  },
+  hover: {
+    x: 20,
     transition: {
       duration: 0.222,
       ease: [0.42, 0, 0.58, 1] as const,
