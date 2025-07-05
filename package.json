@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "yoketh-dev",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,10 +9,12 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "next": "15.3.5",
+    "next-sitemap": "^4.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
