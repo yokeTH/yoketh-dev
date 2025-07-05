@@ -17,6 +17,7 @@ export default function InProgress() {
         <span className='text-4xl'>
           My site&apos;s still a work in progress—stay tuned!
         </span>
+        <span className='text-2xl'>the outline is for debug.</span>
       </div>
     </div>
   )
