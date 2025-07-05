@@ -65,15 +65,49 @@ export default function Menu() {
           >
             <Bracket onClick={handleClose}>X</Bracket>
             <div className='container mx-auto'>
-              <div className='w-full p-16 text-center text-8xl outline'>
+              <motion.div
+                className='w-full p-16 text-center text-8xl outline'
+                initial={{ y: 30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 120,
+                  damping: 12,
+                  delay: 0,
+                }}
+              >
                 Home
-              </div>
-              <div className='w-full p-16 text-center text-8xl outline'>
-                MENU 1
-              </div>
-              <div className='w-full p-16 text-center text-8xl outline'>
-                MENU 2
-              </div>
+              </motion.div>
+              <a href='https://github.com/yokeTH'>
+                <motion.div
+                  className='w-full p-16 text-center text-8xl outline'
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 120,
+                    damping: 12,
+                    delay: 0.12,
+                  }}
+                >
+                  Github
+                </motion.div>
+              </a>
+              <a href='https://linkedin.com/in/yoketh'>
+                <motion.div
+                  className='w-full p-16 text-center text-8xl outline'
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 120,
+                    damping: 12,
+                    delay: 0.24,
+                  }}
+                >
+                  LinkedIn
+                </motion.div>
+              </a>
             </div>
           </motion.div>
         )}
