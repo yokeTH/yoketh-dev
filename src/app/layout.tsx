@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Press_Start_2P } from 'next/font/google'
 
+import Logo from '@/components/logo'
 import Menu from '@/components/menu'
 
 import './globals.css'
@@ -55,6 +56,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${pressStart2P.variable} antialiased`}>
+        <Logo />
         <Menu />
         {children}
       </body>
