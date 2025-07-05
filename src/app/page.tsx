@@ -1,10 +1,12 @@
 import DinoSay from '@/components/dino-say'
+import InProgress from '@/components/inprogress'
 import Highlight from '@/components/ui/highlight'
 
 export default function Home() {
   return (
     <div className='min-h-screen grid-rows-[20px_1fr_20px] items-center gap-16 p-8 pb-20 sm:p-20'>
       <main className='flex flex-col items-start justify-start gap-8'>
+        <InProgress />
         <h1 className='text-4xl leading-snug'>
           Hi,
           <br />
