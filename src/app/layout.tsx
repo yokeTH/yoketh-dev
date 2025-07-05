@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import { Jersey_10 } from 'next/font/google'
 
+import DinoSay from '@/components/dino-say'
+import InProgress from '@/components/inprogress'
 import Logo from '@/components/logo'
 import Menu from '@/components/menu'
-import PageIndicator from '@/components/page-indecator'
 
 import './globals.css'
 
@@ -59,8 +60,9 @@ export default function RootLayout({
       <body className={`${jercy10.variable} antialiased`}>
         <Logo />
         <Menu />
-        <PageIndicator />
+        <InProgress />
         {children}
+        <DinoSay />
       </body>
     </html>
   )

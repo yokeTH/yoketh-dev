@@ -29,7 +29,7 @@ export default function Menu() {
       {/* Bars animation */}
       <AnimatePresence onExitComplete={() => setOpen(false)}>
         {open && (
-          <motion.div className='pointer-events-none absolute inset-0 z-50'>
+          <motion.div className='pointer-events-none fixed inset-0 z-50'>
             {Array.from({ length: NUM_BARS }).map((_, i) => (
               <motion.div
                 key={i}
@@ -58,7 +58,7 @@ export default function Menu() {
       <AnimatePresence>
         {showContent && (
           <motion.div
-            className='absolute inset-0 z-50 flex items-center justify-center bg-black'
+            className='fixed inset-0 z-50 flex items-center justify-center bg-black'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

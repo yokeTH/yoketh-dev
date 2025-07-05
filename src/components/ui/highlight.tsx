@@ -1,12 +1,22 @@
+import { cn } from '@sglara/cn'
 import * as motion from 'motion/react-client'
 
-export default function Highlight({ children }: { children: React.ReactNode }) {
+export default function Highlight({
+  children,
+  className,
+}: {
+  children: React.ReactNode
+  className?: string
+}) {
   return (
-    <motion.span
-      className='absolute w-fit cursor-pointer bg-red-500 text-shadow-black text-shadow-lg'
+    <motion.h1
+      className={cn(
+        'absolute w-fit cursor-pointer bg-red-500 text-shadow-black text-shadow-lg',
+        className,
+      )}
       whileHover={{ padding: '4px', x: [0, -5, 5, -5, 5, 0] }}
     >
       {children}
-    </motion.span>
+    </motion.h1>
   )
 }
