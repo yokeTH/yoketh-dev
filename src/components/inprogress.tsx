@@ -1,6 +1,6 @@
 export default function InProgress() {
   return (
-    <div className='fixed top-1/2 left-1/2 -z-10 -translate-1/2 text-orange-400'>
+    <div className='fixed top-1/2 left-1/2 z-50 -translate-1/2 text-orange-400'>
       <div className='flex flex-col items-center justify-center'>
         <div className='h-10 w-10'>
           <svg
