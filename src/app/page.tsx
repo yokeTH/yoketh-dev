@@ -1,8 +1,23 @@
+import DinoSay from '@/components/dino-say'
+import InProgress from '@/components/inprogress'
+import Highlight from '@/components/ui/highlight'
+
 export default function Home() {
   return (
-    <div className='grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20'>
-      <main className='row-start-2 flex flex-col items-center gap-[32px] sm:items-start'>
-        CONTENTTTT
+    <div className='min-h-screen grid-rows-[20px_1fr_20px] items-center gap-16 p-8 pb-20 sm:p-20'>
+      <main className='flex flex-col items-start justify-start gap-8'>
+        <InProgress />
+        <h1 className='text-4xl leading-snug'>
+          Hi,
+          <br />
+          I&apos;m&nbsp;
+          <Highlight>Thanapon Johdee</Highlight>
+          <br />
+          A Fullstack Developer
+          <br />
+          Who Enjoys Creating Websites.
+        </h1>
+        <DinoSay />
       </main>
     </div>
   )
