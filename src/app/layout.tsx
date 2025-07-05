@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Press_Start_2P } from 'next/font/google'
+import { Jersey_10 } from 'next/font/google'
 
 import Logo from '@/components/logo'
 import Menu from '@/components/menu'
@@ -7,9 +7,9 @@ import PageIndicator from '@/components/page-indecator'
 
 import './globals.css'
 
-const pressStart2P = Press_Start_2P({
+const jercy10 = Jersey_10({
   weight: '400',
-  variable: '--font-press-start-2p',
+  variable: '--font-jercy-10',
   subsets: ['latin'],
 })
 
@@ -56,7 +56,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${pressStart2P.variable} antialiased`}>
+      <body className={`${jercy10.variable} antialiased`}>
         <Logo />
         <Menu />
         <PageIndicator />
