@@ -4,10 +4,11 @@ import { useEffect } from 'react'
 
 import { cn } from '@sglara/cn'
 import {
+  animate,
   motion,
+  useMotionValue,
   useMotionValueEvent,
   useScroll,
-  useTransform,
 } from 'motion/react'
 
 import { useScrollContext } from '@/components/sections/layout'
@@ -20,19 +21,20 @@ export default function ScrollSections({
   const { total, ref, setCurrent, setTotal } = useScrollContext()
   const { scrollYProgress } = useScroll({ target: ref })
 
-  const x = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ['0%', `-${(total - 1) * 100}%`],
-  )
+  const x = useMotionValue(0)
 
   useEffect(() => {
     setTotal(Array.isArray(children) ? children.length : 1)
   }, [])
 
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-    const index = Math.min(total, Math.ceil(latest * total) + 1)
-    setCurrent(index)
+    const index = Math.min(total - 1, Math.round(latest * total))
+    setCurrent(index + 1)
+    animate(x, -index * window.innerWidth, {
+      type: 'spring',
+      damping: 30,
+      stiffness: 200,
+    })
   })
 
   return (
