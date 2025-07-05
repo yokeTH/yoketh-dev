@@ -29,11 +29,11 @@ export default function Menu() {
       {/* Bars animation */}
       <AnimatePresence onExitComplete={() => setOpen(false)}>
         {open && (
-          <motion.div className='pointer-events-none absolute inset-0 z-50'>
+          <motion.div className='pointer-events-none fixed inset-0 z-50'>
             {Array.from({ length: NUM_BARS }).map((_, i) => (
               <motion.div
                 key={i}
-                className='absolute top-0 bottom-0 bg-black outline outline-white'
+                className='absolute top-0 bottom-0 bg-white text-black'
                 style={{
                   width: `${100 / NUM_BARS}%`,
                   left: `${(100 / NUM_BARS) * i}%`,
@@ -58,22 +58,56 @@ export default function Menu() {
       <AnimatePresence>
         {showContent && (
           <motion.div
-            className='absolute inset-0 z-50 flex items-center justify-center bg-black'
+            className='fixed inset-0 z-50 flex items-center justify-center bg-white text-black'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <Bracket onClick={handleClose}>X</Bracket>
             <div className='container mx-auto'>
-              <div className='w-full p-16 text-center text-8xl outline'>
+              <motion.div
+                className='w-full p-16 text-center text-8xl outline'
+                initial={{ y: 30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 120,
+                  damping: 12,
+                  delay: 0,
+                }}
+              >
                 Home
-              </div>
-              <div className='w-full p-16 text-center text-8xl outline'>
-                MENU 1
-              </div>
-              <div className='w-full p-16 text-center text-8xl outline'>
-                MENU 2
-              </div>
+              </motion.div>
+              <a href='https://github.com/yokeTH'>
+                <motion.div
+                  className='w-full p-16 text-center text-8xl outline'
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 120,
+                    damping: 12,
+                    delay: 0.12,
+                  }}
+                >
+                  Github
+                </motion.div>
+              </a>
+              <a href='https://linkedin.com/in/yoketh'>
+                <motion.div
+                  className='w-full p-16 text-center text-8xl outline'
+                  initial={{ y: 30, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 120,
+                    damping: 12,
+                    delay: 0.24,
+                  }}
+                >
+                  LinkedIn
+                </motion.div>
+              </a>
             </div>
           </motion.div>
         )}
