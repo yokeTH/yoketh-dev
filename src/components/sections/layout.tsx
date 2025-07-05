@@ -43,7 +43,3 @@ export function ScrollProvider({ children }: Props) {
     </ScrollContext.Provider>
   )
 }
-
-export default function ScrollLayout({ children }: Props) {
-  return <div>{children}</div>
-}
