@@ -1,5 +1,6 @@
 import * as React from 'react'
 
+import { cn } from '@sglara/cn'
 import * as motion from 'motion/react-client'
 
 const leftBrecket = {
@@ -26,13 +27,16 @@ const rightBrecket = {
   },
 }
 
+type Position = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
+
 interface Props {
   children: React.ReactNode
   onClick?: React.MouseEventHandler<HTMLButtonElement>
+  position?: Position
 }
 
 const Bracket = React.forwardRef<HTMLButtonElement, Props>(function Bracket(
-  { children, onClick },
+  { children, onClick, position = 'top-right' },
   ref,
 ) {
   return (
@@ -41,7 +45,13 @@ const Bracket = React.forwardRef<HTMLButtonElement, Props>(function Bracket(
       initial='rest'
       whileHover='hover'
       animate='rest'
-      className='fixed top-5 right-10 cursor-pointer font-sans'
+      className={cn(
+        'fixed cursor-pointer font-sans',
+        position === 'top-left' && 'top-5 left-10',
+        position === 'top-right' && 'top-5 right-10',
+        position === 'bottom-left' && 'bottom-5 left-10',
+        position === 'bottom-right' && 'right-10 bottom-5',
+      )}
       onClick={onClick}
     >
       <motion.span
