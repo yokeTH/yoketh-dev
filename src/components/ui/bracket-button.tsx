@@ -35,10 +35,11 @@ interface Props {
   children: React.ReactNode
   onClick?: React.MouseEventHandler<HTMLButtonElement>
   position?: Position
+  className?: string
 }
 
 const Bracket = React.forwardRef<HTMLButtonElement, Props>(function Bracket(
-  { children, onClick, position = 'top-right' },
+  { children, onClick, position = 'top-right', className },
   ref,
 ) {
   return (
@@ -53,6 +54,7 @@ const Bracket = React.forwardRef<HTMLButtonElement, Props>(function Bracket(
         position === 'top-right' && 'top-5 right-10',
         position === 'bottom-left' && 'bottom-5 left-10',
         position === 'bottom-right' && 'right-10 bottom-5',
+        className,
       )}
       onClick={onClick}
     >

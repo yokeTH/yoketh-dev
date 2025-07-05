@@ -24,3 +24,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-jercy-10);
 }
+
+@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}

@@ -1,23 +1,30 @@
+import AboutSection from '@/components/sections/about'
 import HeroSection from '@/components/sections/hero'
-import ScrollLayout, { ScrollProvider } from '@/components/sections/layout'
+import { ScrollProvider } from '@/components/sections/layout'
+import OthersSection from '@/components/sections/others'
+import ProjectsSection from '@/components/sections/project'
+import ScrollSections from '@/components/sections/scroll-session'
 import SectionWrapper from '@/components/sections/wrapper'
 
 export default function Home() {
   return (
-    <main className='px-16'>
-      <ScrollLayout>
-        <ScrollProvider>
-          <SectionWrapper sectionNo={1}>
+    <main className='h-dvh w-dvw'>
+      <ScrollProvider>
+        <ScrollSections>
+          <SectionWrapper>
             <HeroSection />
           </SectionWrapper>
-          <SectionWrapper sectionNo={2}>
-            <HeroSection />
+          <SectionWrapper>
+            <AboutSection />
           </SectionWrapper>
-          <SectionWrapper sectionNo={3}>
-            <HeroSection />
+          <SectionWrapper>
+            <ProjectsSection />
           </SectionWrapper>
-        </ScrollProvider>
-      </ScrollLayout>
+          <SectionWrapper>
+            <OthersSection />
+          </SectionWrapper>
+        </ScrollSections>
+      </ScrollProvider>
     </main>
   )
 }

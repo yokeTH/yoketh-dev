@@ -56,12 +56,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
+    <html
+      lang='en'
+      className='no-scrollbar'
+    >
       <body className={`${jercy10.variable} antialiased`}>
-        <Logo />
-        <Menu />
         <InProgress />
         {children}
+        <Logo />
+        <Menu />
         <DinoSay />
       </body>
     </html>
