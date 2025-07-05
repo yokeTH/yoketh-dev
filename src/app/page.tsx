@@ -1,3 +1,4 @@
+import DinoSay from '@/components/dino-say'
 import Highlight from '@/components/ui/highlight'
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
           <br />
           Who Enjoys Creating Websites.
         </h1>
+        <DinoSay />
       </main>
     </div>
   )
