@@ -3,6 +3,7 @@ import { Press_Start_2P } from 'next/font/google'
 
 import Logo from '@/components/logo'
 import Menu from '@/components/menu'
+import PageIndicator from '@/components/page-indecator'
 
 import './globals.css'
 
@@ -58,6 +59,7 @@ export default function RootLayout({
       <body className={`${pressStart2P.variable} antialiased`}>
         <Logo />
         <Menu />
+        <PageIndicator />
         {children}
       </body>
     </html>
