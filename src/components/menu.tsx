@@ -33,7 +33,7 @@ export default function Menu() {
             {Array.from({ length: NUM_BARS }).map((_, i) => (
               <motion.div
                 key={i}
-                className='absolute top-0 bottom-0 bg-black outline outline-white'
+                className='absolute top-0 bottom-0 bg-white text-black'
                 style={{
                   width: `${100 / NUM_BARS}%`,
                   left: `${(100 / NUM_BARS) * i}%`,
@@ -58,7 +58,7 @@ export default function Menu() {
       <AnimatePresence>
         {showContent && (
           <motion.div
-            className='fixed inset-0 z-50 flex items-center justify-center bg-black'
+            className='fixed inset-0 z-50 flex items-center justify-center bg-white text-black'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
