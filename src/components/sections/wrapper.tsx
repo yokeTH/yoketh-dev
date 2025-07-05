@@ -1,6 +1,6 @@
 'use client'
 
-import * as motion from 'motion/react-client'
+import { useEffect } from 'react'
 
 import { useScrollContext } from '@/components/sections/layout'
 
@@ -10,13 +10,11 @@ interface Props {
 }
 
 export default function SectionWrapper({ children, sectionNo }: Props) {
-  const { setCurrent } = useScrollContext()
-  return (
-    <motion.div
-      className='min-h-dvh min-w-[calc(100dvh-128px)]'
-      onViewportEnter={() => setCurrent(sectionNo)}
-    >
-      {children}
-    </motion.div>
-  )
+  const { setTotal } = useScrollContext()
+
+  useEffect(() => {
+    setTotal((prev) => Math.max(prev, sectionNo))
+  }, [sectionNo, setTotal])
+
+  return <div className='h-full w-screen flex-shrink-0 p-16'>{children}</div>
 }
