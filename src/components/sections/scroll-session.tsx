@@ -28,7 +28,7 @@ export default function ScrollSections({
 
   useEffect(() => {
     setTotal(Array.isArray(children) ? children.length : 1)
-  })
+  }, [])
 
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     const index = Math.min(total, Math.ceil(latest * total) + 1)
@@ -41,7 +41,7 @@ export default function ScrollSections({
       className={cn('relative')}
       style={{ height: `${100 * total}dvh` }}
     >
-      <div className='sticky top-0 h-screen w-full snap-x snap-mandatory overflow-hidden scroll-smooth'>
+      <div className='sticky top-0 h-screen w-full overflow-hidden'>
         <motion.div
           style={{ x }}
           className='flex h-full w-full'

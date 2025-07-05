@@ -3,9 +3,5 @@ interface Props {
 }
 
 export default function SectionWrapper({ children }: Props) {
-  return (
-    <div className='h-full w-screen flex-shrink-0 snap-start p-16'>
-      {children}
-    </div>
-  )
+  return <div className='h-full w-screen flex-shrink-0 p-16'>{children}</div>
 }
