@@ -14,7 +14,6 @@ updates:
       interval: 'daily'
     assignees:
       - 'yokeTH'
-      - 'Thiraput01'
 
   - package-ecosystem: 'github-actions'
     open-pull-requests-limit: 15
@@ -25,4 +24,3 @@ updates:
       interval: 'daily'
     assignees:
       - 'yokeTH'
-      - 'Thiraput01'
