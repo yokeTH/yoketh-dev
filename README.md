@@ -32,8 +32,7 @@ It serves as a central hub to showcase my projects, technical writings, and prof
 
 - **Frontend**: Next.js / React
 - **Styling**: Tailwind CSS
-- **Backend / API**: Node.js (if applicable)
-- **Hosting**: Vercel / Custom domain setup
+- **Hosting**: Cloudflare + Deploys.app
 - **Content**: Markdown-driven blog posts
 
 ---
@@ -43,7 +42,7 @@ It serves as a central hub to showcase my projects, technical writings, and prof
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/<your-username>/yoketh-dev.git
+git clone https://github.com/yokeTH/yoketh-dev.git
 cd yoketh-dev
 npm install
 npm run dev
