@@ -1,33 +1,56 @@
-# Turborepo starter
+# yoketh-dev
 
-Run the following command:
+This repository contains the source code for [**yoketh.dev**](https://yoketh.dev), my personal portfolio and blog platform.
+It serves as a central hub to showcase my projects, technical writings, and professional journey.
 
-## Add ShadcnUI
+---
 
+## 🌐 Available URLs
+
+### Main Website
+
+- **Production** → [yoketh.dev](https://yoketh.dev)
+- **Development** → [dev-web.yoketh.dev](https://dev-web.yoketh.dev)
+
+### Blog
+
+- **Production** → [blog.yoketh.dev](https://blog.yoketh.dev)
+- **Development** → [dev-blog.yoketh.dev](https://dev-blog.yoketh.dev)
+
+---
+
+## 📌 Features
+
+- Personal portfolio to highlight projects and skills
+- Blog for sharing technical knowledge and experiences
+- Responsive design for seamless browsing on any device
+- Deployment pipelines for production and development environments
+
+---
+
+## 🚀 Tech Stack
+
+- **Frontend**: Next.js / React
+- **Styling**: Tailwind CSS
+- **Backend / API**: Node.js (if applicable)
+- **Hosting**: Vercel / Custom domain setup
+- **Content**: Markdown-driven blog posts
+
+---
+
+## 🛠️ Development
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/<your-username>/yoketh-dev.git
+cd yoketh-dev
+npm install
+npm run dev
 ```
-pnpm dlx shadcn@latest add -c apps/template
-```
 
-## Generate new apps
+The site will be available locally at http://localhost:3000.
 
-```sh
-pnpm exec turbo gen workspace --copy
+## 📄 License
 
-# ❯ pnpm exec turbo gen workspace --copy
-# turbo 2.5.6
-
-
-# >>> Copy an existing workspace from "turborepo-template"
-
-# ? What type of workspace should be added? app
-# ? What is the name of the app? docs
-# ? Which workspace should "docs" start from?   template
-# ? Where should "docs" be added? apps/docs
-# ? Add workspace dependencies to "docs"? Yes
-# ? Select all dependencies types to modify for "docs" dependencies, devDependencies
-# ? Which packages should be added as dependencies to "docs?   @repo/ui
-# ? Which packages should be added as devDependencies to "docs?   @repo/eslint-config,   @repo/typescript-config
-#
-# AFTER THAT edit app portname
-#
-```
+This project is licensed under the BSD-3 License — feel free to explore, learn, and adapt.
