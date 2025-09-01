@@ -1,11 +1,18 @@
-import { LoginForm } from '@/components/login-form';
+import { Editor } from '@/components/editor';
+import { EditorProvider } from '@/components/editor-provider';
 
-export default function LoginPage() {
+const content = `# Yoke’s Block — built with Milkdown
+- [Editor](/editor)
+- [Readonly](/readonly)
+`;
+
+export default function Home() {
   return (
-    <div className='bg-muted flex min-h-svh flex-col items-center justify-center p-6 md:p-10'>
-      <div className='w-full max-w-sm md:max-w-3xl'>
-        <LoginForm />
-      </div>
-    </div>
+    <EditorProvider>
+      <Editor
+        value={content}
+        readonly
+      />
+    </EditorProvider>
   );
 }

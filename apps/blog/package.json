@@ -11,6 +11,9 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@milkdown/crepe": "^7.15.5",
+    "@milkdown/react": "^7.15.5",
+    "@milkdown/utils": "^7.15.5",
     "@repo/ui": "workspace:*",
     "@tailwindcss/postcss": "^4.1.12",
     "lucide-react": "^0.475.0",
