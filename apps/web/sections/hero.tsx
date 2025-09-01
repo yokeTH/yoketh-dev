@@ -1,0 +1,27 @@
+import Highlight from '@/components/highlight';
+
+export default function HeroSection() {
+  return (
+    <div className='h-full w-full p-16'>
+      <div className='relative h-full w-full'>
+        <div className='-translate-1/2 absolute left-1/2 top-1/2 h-96 w-96 rounded-full backdrop-blur-xl'>
+          <div className='h-full w-full rounded-full bg-white'></div>
+        </div>
+        <h2 className='block text-6xl'>Hi, I&apos;m&nbsp;</h2>
+        <Highlight className='text-shadow-green-500 text-shadow-lg text-8xl'>
+          Thanapon Johdee
+        </Highlight>
+        <h3 className='block text-6xl'>
+          A Fullstack Developer
+          <br />
+          Who Enjoys Creating Websites.
+        </h3>
+        <div className='absolute bottom-20 left-0 text-2xl text-gray-500'>
+          <div>A.K.A yoke.th</div>
+          <div>Engineering Student</div>
+          <div>Freelancer / Partime</div>
+        </div>
+      </div>
+    </div>
+  );
+}
